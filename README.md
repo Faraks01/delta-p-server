@@ -1,4 +1,4 @@
-Серверная часть для обслуживания приложения: https://github.com/Faraks01/delta-p-client
+Серверная часть для обслуживания клиентского приложения: https://github.com/Faraks01/delta-p-client
 
 Полная версия с рабочим сервером: https://delta-p.herokuapp.com/
 
@@ -7,6 +7,8 @@
 --Node.js
 
 --Express.js
+
+--Atlas: MongoDB
 
 --Passport.js
 
