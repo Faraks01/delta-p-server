@@ -29,9 +29,9 @@ app.use(passport.session());
 app.use("/vault", require("./routes/vault"));
 app.use("/auth", require("./routes/auth"));
 
-// app.use(express.static(path.join(__dirname, "build")));
-// app.get('/*', function (req, res, next) {
-//   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-// });
+app.use(express.static(path.join(__dirname, "build")));
+app.get('/*', function (req, res, next) {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
 
 module.exports = app;
