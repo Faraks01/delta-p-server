@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "f5d44640b825be912891ba739b8fc39b",
-    "url": "/static/media/background-1.f5d44640.jpg"
+    "revision": "3e11119ec55466e68d939354302801fa",
+    "url": "/static/media/arrow-right.3e11119e.svg"
   },
   {
-    "revision": "77ec21a85546ea8de825",
-    "url": "/static/css/main.fd5bee28.chunk.css"
+    "revision": "f2989862330b7c67c61f",
+    "url": "/static/css/main.2e62cba8.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/envelope.462d4a2b.svg"
   },
   {
-    "revision": "b39376a4982c20a406f3",
-    "url": "/static/js/2.f7ca7687.chunk.js"
+    "revision": "33953f2e807beb951a23",
+    "url": "/static/js/2.e23bb70a.chunk.js"
   },
   {
     "revision": "8c6af627c9874ea638ecb2e85c0fa289",
@@ -36,16 +36,32 @@ self.__precacheManifest = [
     "url": "/static/media/loop.b73c0124.svg"
   },
   {
+    "revision": "f3b6c54c5cc90485a549a1ae6699a9c4",
+    "url": "/static/media/Google_Chrome_icon.f3b6c54c.svg"
+  },
+  {
+    "revision": "edf69d104c6d6f1bc83565927d0b8e10",
+    "url": "/static/media/Firefox_Logo.edf69d10.svg"
+  },
+  {
+    "revision": "b4b964d2ce0bbef03baea601b9bb6446",
+    "url": "/static/media/Opera_icon.b4b964d2.svg"
+  },
+  {
+    "revision": "237a7f3b2a5860f0fe098c80be9b0595",
+    "url": "/static/media/Safari_browser_logo.237a7f3b.svg"
+  },
+  {
     "revision": "ced611daf7709cc778da928fec876475",
     "url": "/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
-    "url": "/static/media/slick.b7c9e1e4.woff"
-  },
-  {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/static/media/slick.d41f55a7.ttf"
+  },
+  {
+    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
+    "url": "/static/media/slick.b7c9e1e4.woff"
   },
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
@@ -60,24 +76,24 @@ self.__precacheManifest = [
     "url": "/static/media/magnifier.2773ad8f.svg"
   },
   {
-    "revision": "3e11119ec55466e68d939354302801fa",
-    "url": "/static/media/arrow-right.3e11119e.svg"
+    "revision": "f2989862330b7c67c61f",
+    "url": "/static/js/main.ac0e2954.chunk.js"
   },
   {
     "revision": "47ec24b14d2a9da84137bf2a17522d4e",
     "url": "/static/media/arrow-left.47ec24b1.svg"
   },
   {
-    "revision": "77ec21a85546ea8de825",
-    "url": "/static/js/main.d7f2e2d7.chunk.js"
+    "revision": "9b64e7735ffa43c53bfab89b2bd61c89",
+    "url": "/static/media/background-1.9b64e773.jpg"
   },
   {
-    "revision": "29142f0e262f9cfcb4949a233b11c5bb",
-    "url": "/static/media/background-2.29142f0e.jpg"
+    "revision": "526da8bb86283b49cfd20eab12b7998a",
+    "url": "/static/media/background-2.526da8bb.jpg"
   },
   {
-    "revision": "3fd95769737607eb40a92c6845adde92",
-    "url": "/static/media/background-3.3fd95769.jpg"
+    "revision": "6a5cdabda376c872099f0cd1feab911d",
+    "url": "/static/media/background-3.6a5cdabd.jpg"
   },
   {
     "revision": "4def78c00e4d60588699d6e9ab19dac6",
@@ -128,11 +144,11 @@ self.__precacheManifest = [
     "url": "/static/media/smartphone.48b25176.svg"
   },
   {
-    "revision": "b39376a4982c20a406f3",
+    "revision": "33953f2e807beb951a23",
     "url": "/static/css/2.6a3dd0f4.chunk.css"
   },
   {
-    "revision": "f44ee9b325ba419b8276ca5ad0239082",
+    "revision": "9bde7c531b1e516f7c4b73640a7d3d33",
     "url": "/index.html"
   }
 ];
