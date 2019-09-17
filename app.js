@@ -12,11 +12,11 @@ require('./config/passport-setup');
 app.use(helmet());
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-app.use(fileUpload({
-    useTempFiles : true,
-    tempFileDir : '/tmp/'
-}));
+app.use(express.urlencoded({extended: true}));
+// app.use(fileUpload({
+//     useTempFiles : true,
+//     tempFileDir : '/tmp/'
+// }));
 app.use(cookieParser());
 app.use(session({ secret: 'zzh7bnk', cookie: { maxAge: 7200000, httpOnly: false }, resave: false, saveUninitialized: false }));
 
