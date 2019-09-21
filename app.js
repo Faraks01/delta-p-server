@@ -27,6 +27,7 @@ app.use(passport.session());
 
 // Routes
 app.use("/api/messages", require("./routes/vault"));
+app.use("/api", require("./routes/pageContent"));
 app.use("/api/admin", require("./routes/auth"));
 
 app.use(express.static(path.join(__dirname, "build")));

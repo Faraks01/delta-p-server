@@ -8,6 +8,9 @@ const jsonParser = bodyParser.json();
 const mongoose = require("mongoose");
 const Feedback = require("../db/models/feedback");
 
+// ES6 Promises
+mongoose.Promise = global.Promise;
+
 async function sendMail(data) {
 
 	// create reusable transporter object using the default SMTP transport
@@ -32,9 +35,6 @@ async function sendMail(data) {
 	console.log('Message sent: %s', info.messageId);
 	// Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 }
-
-// ES6 Promises
-mongoose.Promise = global.Promise;
 
 // Delete from mongodb
 router.post("/remove", jsonParser, function (req, res) {
