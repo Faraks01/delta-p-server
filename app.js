@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-app.use("/api/messages", require("./routes/vault"));
+app.use("/api/messages", require("./routes/messages"));
 app.use("/api", require("./routes/pageContent"));
 app.use("/api/admin", require("./routes/auth"));
 
