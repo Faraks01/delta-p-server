@@ -71,21 +71,6 @@ router.post("/add", upload.any(), async (req, res) => {
 	}
 });
 
-// Save file
-router.post('/upload', function (req, res) {
-	if (Object.keys(req.files).length == 0) {
-		return res.status(400).send('No files were uploaded.');
-	}
-
-	let file = req.files.file;
-	let str = "./db/uploaded-files/" + file.name;
-//
-	file.mv(str, function (err) {
-		if (err) return res.status(500).send(err);
-		res.send('File uploaded!');
-	});
-});
-
 // GET from mongodb
 router.get("/collection",
 	function (req, res) {
