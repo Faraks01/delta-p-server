@@ -10,7 +10,15 @@ router.get("/pageContent", (req, res) => {
 
 	fs.readFile(path.resolve('assets', 'pageContent.json'), 'utf8', (err, data) => {
 		if (err) {
-			res.status(500).send(err);
+			// If pageContent is not exist get data from _pageContent
+			fs.readFile(path.resolve('assets', '_pageContent.json'), 'utf8', (err, data) => {
+				if (err) {
+					res.status(500).send(err);
+				} else {
+					res.set({ 'content-type': 'application/json; charset=utf-8' });
+					res.end(data);
+				}
+			})
 		} else {
 			res.set({ 'content-type': 'application/json; charset=utf-8' });
 			res.end(data);
