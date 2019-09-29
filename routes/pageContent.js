@@ -4,52 +4,51 @@ const path = require("path");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
+const mongoose = require("mongoose");
+const pageContent = require("../db/models/pageContent.js");
+
+// ES6 Promises
+mongoose.Promise = global.Promise;
 
 // Get page content from json
-router.get("/pageContent", (req, res) => {
-
-	fs.readFile(path.resolve('assets', 'pageContent.json'), 'utf8', (err, data) => {
-		if (err) {
-			// If pageContent is not exist get data from _pageContent
-			fs.readFile(path.resolve('assets', '_pageContent.json'), 'utf8', (err, data) => {
+router.get("/pageContent", async (req, res) => {
+	try {
+		let data = await pageContent.find();
+		if (data.length) {
+			res.send(data[0]);
+		} else {
+			fs.readFile(path.resolve('assets', '_pageContent.json'), 'utf8', async (err, data) => {
 				if (err) {
 					res.status(500).send(err);
 				} else {
-					res.set({ 'content-type': 'application/json; charset=utf-8' });
-					res.end(data);
+					let pageContentInstance = new pageContent(JSON.parse(data));
+
+					try {
+						res.send(await pageContentInstance.save());
+					} catch (e) {
+						res.status(500).send(e);
+					}
 				}
 			})
-		} else {
-			res.set({ 'content-type': 'application/json; charset=utf-8' });
-			res.end(data);
 		}
-	})
-
+	} catch (e) {
+		res.status(500).send(e);
+	}
 });
 
 // Rewrite page content from json
-router.post("/pageContent", jsonParser, (req, res) => {
+router.post("/pageContent", jsonParser, async (req, res) => {
 
-	fs.readFile(path.resolve('assets', 'pageContent.json'), 'utf8', (err, data) => {
-		if (err) {
-			res.status(500).send(err);
-		} else {
-			let file = JSON.stringify(
-				{
-					...JSON.parse(data),
-					...req.body
-				}
-			);
-
-			fs.writeFile(path.resolve('assets', 'pageContent.json'), file, 'utf8', (err) => {
-				if (err) {
-					res.status(500).send(err);
-				} else {
-					res.end();
-				}
-			})
-		}
-	});
+	try {
+		await pageContent.replaceOne(
+			{_id: req.body._id},
+			req.body
+		);
+		res.send(req.body);
+	} catch (e) {
+		console.error(e);
+		res.status(500).send(e);
+	}
 
 });
 

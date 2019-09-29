@@ -8,7 +8,6 @@ const app = require("../app");
 const debug = require("debug")("express-server:server");
 const http = require("http");
 const mongoose = require("mongoose");
-const Feedback = require("../db/models/feedback");
 
 // ES6 Promises
 mongoose.Promise = global.Promise;
