@@ -18,9 +18,7 @@ router.get('/sign_out', function (req, res) {
 });
 
 router.get('/check',
-    (req, res) => {
-        res.end(JSON.stringify(req.user));
-    }
+    (req, res) => res.end(JSON.stringify(req.user))
 )
 
 module.exports = router;
