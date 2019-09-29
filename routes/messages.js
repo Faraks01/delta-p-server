@@ -26,7 +26,7 @@ async function sendMail(data) {
 	let {_id, name, phone, email, message, attachments = {}} = data;
 	let info = await transporter.sendMail({
 		from: '"noreply" <deltap233233@gmail.com>', // sender address
-		to: 'faraks01@gmail.com, info@delta-p.msk.ru', // list of receivers
+		to: 'info@delta-p.msk.ru', // list of receivers
 		subject: `Сообщение: ${_id}`, // Subject line
 		text: `Имя: ${name}, Телефон: ${phone}, Почта: ${email}, Сообщение: ${message}`, // plain text body
 		attachments
